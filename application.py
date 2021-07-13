@@ -1,40 +1,13 @@
-import streamlit as st
+from flask import Flask
+from flask.templating import render_template
+
+app = Flask(__name__, static_url_path='/static')
 
 
-def navigation():
-    query_params = st.experimental_get_query_params()['p'][0]
-    return query_params
+@app.route('/')
+def index():
+    return render_template('index.html', name='home')
 
 
-if navigation() == "home":
-    st.title('Home')
-    st.write('This is the home page.')
-
-elif navigation() == "results":
-    st.title('Results List')
-    for item in range(9):
-        st.write(f'Results {item}')
-
-elif navigation() == "analysis":
-    st.title('Analysis')
-    x, y = st.number_input('Input X'), st.number_input('Input Y')
-    st.write('Result: ' + str(x+y))
-
-elif navigation() == "examples":
-    st.title('Examples Menu')
-    st.write('Select an example.')
-
-
-elif navigation() == "logs":
-    st.title('View all of the logs')
-    st.write('Here you may view all of the logs.')
-
-
-elif navigation() == "verify":
-    st.title('Data verification is started...')
-    st.write('Please stand by....')
-
-
-elif navigation() == "config":
-    st.title('Configuration of the app.')
-    st.write('Here you can configure the application')
+if __name__ == "__main__":
+    app.run(debug=True)

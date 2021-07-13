@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 3rem;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 18px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #04AA6D;
+    }
+
+    .logo-image {
+      width: 46px;
+      height: 46px;
+      overflow: hidden;
+      margin-top: -25%;
+    }
+  </style>
+</head>
+
+<body style="background-color: #31333f;">
+  <ul>
+    <li>
+      <a class="navbar-brand" href="/">
+        <div class="logo-image">
+          <img src="/static/images/logo.png" class="img-fluid">
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#" onclick="setURL('http://localhost:8501/?p=analysis')">Analysis</a>
+    </li>
+    <li>
+      <a href="#" onclick="setURL('http://localhost:8501/?p=results')">Results</a>
+    </li>
+    <li>
+      <a href="#" onclick="setURL('http://localhost:8501/?p=examples')">Examples</a>
+    </li>
+
+  </ul>
+  <iframe src="http://localhost:8501/?p=home" id="streamlit_content"
+    style="position:fixed; top:5.6%; left:0; bottom:0; right:0; width:100%; height:90%; border:none; margin:10; padding:10; overflow:hidden; z-index:999999;">
+    Your browser doesn't support iframes
+  </iframe>
+
+</body>
+<script>
+  function setURL(url) {
+    document.getElementById('streamlit_content').src = url;
+    console.log('Works!')
+  }
+</script>
+
+</html>
