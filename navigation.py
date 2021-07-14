@@ -16,7 +16,7 @@ if navigation() == "home":
 
 elif navigation() == "results":
     st.title('Results List')
-    for item in range(9):
+    for item in range(25):
         st.write(f'Results {item}')
 
 elif navigation() == "analysis":

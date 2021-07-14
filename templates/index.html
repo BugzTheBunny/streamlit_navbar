@@ -2,53 +2,10 @@
 <html>
 
 <head>
-  <style>
-    body {
-      margin: 0;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 3rem;
-    }
-
-    li {
-      float: left;
-    }
-
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 18px 16px;
-      text-decoration: none;
-    }
-
-    li a:hover:not(.active) {
-      background-color: #111;
-    }
-
-    .active {
-      background-color: #04AA6D;
-    }
-
-    .logo-image {
-      width: 46px;
-      height: 46px;
-      overflow: hidden;
-      margin-top: -25%;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="/static/styles/styles.css">
 </head>
 
-<body style="background-color: #31333f;">
+<body>
   <ul>
     <li>
       <a class="navbar-brand" href="/">
@@ -68,8 +25,7 @@
     </li>
 
   </ul>
-  <iframe src="http://localhost:8501/?p=home" id="streamlit_content"
-    style="position:fixed; top:5.6%; left:0; bottom:0; right:0; width:100%; height:90%; border:none; margin:10; padding:10; overflow:hidden; z-index:999999;">
+  <iframe src="http://localhost:8501/?p=home" id="streamlit_content">
     Your browser doesn't support iframes
   </iframe>
 
