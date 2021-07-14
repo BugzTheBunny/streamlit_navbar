@@ -6,7 +6,16 @@
 </head>
 
 <body>
+  <div class="dropdown">
+    <button class="dropbtn">Dropdown</button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>
   <ul>
+
     <li>
       <a class="navbar-brand" href="/">
         <div class="logo-image">
@@ -24,8 +33,10 @@
       <a href="#" onclick="setURL('http://localhost:8501/?p=examples')">Examples</a>
     </li>
 
+
   </ul>
-  <iframe src="http://localhost:8501/?p=home" id="streamlit_content">
+  <iframe src="http://localhost:8501/?p=home" id="streamlit_content" allowfullscreen frameborder="0"
+    wmode="transparent">
     Your browser doesn't support iframes
   </iframe>
 

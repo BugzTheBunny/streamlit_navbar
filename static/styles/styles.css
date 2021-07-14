@@ -1,7 +1,7 @@
 body {
     font-family: 'Trebuchet MS', sans-serif;
-    margin: 0;
     font-weight: bold;
+    margin: 0;
      background-color: whitesmoke;
 } 
 
@@ -36,7 +36,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-    background-color: #04AA6D;
+    background-color: #333;
 }
 
 .logo-image {
@@ -51,4 +51,49 @@ iframe{
     border: none;
     position: fixed;
     height: 100%;
+    z-index: 0;
+}
+.dropbtn {
+  background-color: #333;
+  color: white;
+  padding: 16px;
+font-size: large;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  height: 3.5rem;
+
+}
+
+.dropdown {
+  position: fixed;
+  right: 0;
+  z-index: 9999999999999;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 9999999;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #333;
 }
