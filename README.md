@@ -1,4 +1,5 @@
-# Streamlit NavBar. [A version without flask can be found here](https://github.com/BugzTheBunny/streamlit-navbar-flaskless)
+# Streamlit NavBar.  
+### [A version without flask can be found here](https://github.com/BugzTheBunny/streamlit-navbar-flaskless)
 
 An example of how to make an streamlit app with a navbar.
 
